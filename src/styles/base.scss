@@ -1,0 +1,133 @@
+@import './colors';
+
+body {
+	font-family: 'Roboto' !important;
+	margin: 0 0;
+	background: #ffffff;
+}
+
+$colors-list:(
+	primary: $primary,
+	secondary: $secondary,
+	dark: $dark,
+	muted: $muted,
+	white: $white,
+	success: $success,
+	danger: $danger,
+	disabled: $disabled,
+	primaryLight: $primaryLight,
+	secondaryLight: $secondaryLight,
+	black: $black,
+	default: $default,
+	light: $light
+);
+
+@each $key, $val in $colors-list {
+	.bg-#{$key} {
+		background-color: $val;
+	}
+	.color-#{$key} {
+		color: #{$val} !important;
+		a {
+			color: #{$val} !important;
+		}
+	}
+	.border-#{$key} {
+		border-color: #{$val};
+	}
+}
+
+@each $key, $sizeN in (none, 0px), (micro, 4px), (tiny, 8px),
+					(small, 16px), (base, 24px), (large, 40px), 
+					(xLarge, 64px) {
+	.margin-#{$key} {
+		margin: $sizeN;
+	}
+	.padding-#{$key} {
+		padding: $sizeN;
+	}
+
+}
+
+@each $key, $sizeX in (microX, 4px), (tinyX, 8px),
+					(smallX, 16px), (baseX, 24px), 
+					(largeX, 40px), (xLargeX, 64px) {
+	.margin-#{$key} {
+		margin-left: $sizeX;
+		margin-right: $sizeX;
+	}
+	.padding-#{$key} {
+		padding-left: $sizeX;
+		padding-right: $sizeX;
+	}
+
+} 
+
+@each $key, $sizeY in (microY, 4px), (tinyY, 8px),
+					(smallY, 16px), (baseY, 24px), 
+					(largeY, 40px), (xLargeY, 64px) {
+	.margin-#{$key} {
+		margin-top: $sizeY;
+		margin-bottom: $sizeY;
+	}
+	.padding-#{$key} {
+		padding-top: $sizeY;
+		padding-bottom: $sizeY;
+	}
+
+}
+
+@each $key, $sizeT in (microT, 4px), (tinyT, 8px),
+					(smallT, 16px), (baseT, 24px), 
+					(largeT, 40px), (xLargeT, 64px) {
+	.margin-#{$key} {
+		margin-top: $sizeT;
+	}
+	.padding-#{$key} {
+		padding-top: $sizeT;
+	}
+
+}
+
+@each $key, $sizeR in (microR, 4px), (tinyR, 8px),
+					(smallR, 16px), (baseR, 24px), 
+					(largeR, 40px), (xLargeR, 64px) {
+	.margin-#{$key} {
+		margin-right: $sizeR;
+	}
+	.padding-#{$key} {
+		padding-right: $sizeR;
+	}
+
+}
+
+@each $key, $sizeB in (microB, 4px), (tinyB, 8px),
+					(smallB, 16px), (baseB, 24px), 
+					(largeB, 40px), (xLargeB, 64px) {
+	.margin-#{$key} {
+		margin-bottom: $sizeB;
+	}
+	.padding-#{$key} {
+		padding-bottom: $sizeB;
+	}
+
+}
+
+@each $key, $sizeL in (microL, 4px), (tinyL, 8px),
+					(smallL, 16px), (baseL, 24px), 
+					(largeL, 40px), (xLargeL, 64px) {
+	.margin-#{$key} {
+		margin-left: $sizeL;
+	}
+	.padding-#{$key} {
+		padding-left: $sizeL;
+	}
+
+}
+
+.font-10 {
+  font-size: 10px;
+}
+.font-12 {
+  font-size: 12px;
+}

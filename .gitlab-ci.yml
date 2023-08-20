@@ -1,0 +1,171 @@
+## Prixa Tech Division (c) 2020
+## Maintainer: Rheza
+
+image: node:10-stretch
+
+stages:
+  - build
+  - deploy
+
+variables:
+  HOST: storage.bunnycdn.com
+
+## Builds
+
+### Dev
+
+build dev:
+  stage: build
+  script:
+    - cp $ENV_DEV .env
+    - yarn && yarn build && mv build build_develop
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_develop/
+  environment: develop
+  only:
+    - develop
+
+deploy dev:
+  stage: deploy
+  script:
+    - upload dev-nalar $PWD_DEV $HOST build_develop
+  environment: develop
+  only:
+    - develop
+
+### Staging
+
+build staging:
+  stage: build
+  script:
+    - cp $ENV_STAGING .env
+    - yarn && yarn build && mv build build_staging
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_staging/
+  environment: staging
+  only:
+    - staging
+
+deploy staging:
+  stage: deploy
+  script:
+    - upload staging-nalar $PWD_STAGING $HOST build_staging
+  environment: staging
+  only:
+    - staging
+
+### Production
+
+build prod:
+  stage: build
+  script:
+    - cp $ENV_PROD .env
+    - yarn && yarn build && mv build build_prod
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_prod/
+  environment: production
+  only:
+    - master
+
+deploy prod:
+  stage: deploy
+  script:
+    - upload prod-nalar $PWD_PROD $HOST build_prod
+  environment: production
+  when: manual
+  only:
+    - master
+
+### Dev Covid19
+
+build dev covid19:
+  stage: build
+  script:
+    - cp $ENV_COVID19_DEV .env
+    - yarn && yarn build && mv build build_develop
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_develop/
+  environment: develop
+  only:
+    - covid/develop-branch
+
+deploy dev covid19:
+  stage: deploy
+  script:
+    - uploadCovid dev-covid19 $PWD_DEV_COVID19 $HOST build_develop
+  environment: develop
+  only:
+    - covid/develop-branch
+
+### Staging Covid19
+
+build staging covid19:
+  stage: build
+  script:
+    - cp $ENV_COVID19_STAGING .env
+    - yarn && yarn build && mv build build_staging
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_staging/
+  environment: staging
+  only:
+    - covid/staging
+
+deploy staging covid19:
+  stage: deploy
+  script:
+    - uploadCovid staging-covid19 $PWD_STAGING_COVID19 $HOST build_staging
+  environment: staging
+  only:
+    - covid/staging
+
+### Covid19 Production
+
+build prod covid19:
+  stage: build
+  script:
+    - cp $ENV_COVID19_PROD .env
+    - yarn && yarn build && mv build build_prod
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build_prod/
+  environment: production
+  only:
+    - covid/master
+
+deploy prod covid19:
+  stage: deploy
+  script:
+    - uploadCovid prod-covid19 $PWD_PROD_COVID19 $HOST build_prod
+  environment: production
+  when: manual
+  only:
+    - covid/master
+
+## Helper functions
+
+.functions: &functions |
+  # Functions
+  ## Upload to CDN Storage
+  function upload() {
+    cp $4/index.html 404.html
+    lftp -c "set ftp:ssl-allow no; open -u $1,$2 $3; glob -a rm -r *; mirror -Rev $4/ ./ --ignore-time --parallel=10; mkdir bunnycdn_errors; put -O bunnycdn_errors/ 404.html"
+  }
+
+  function uploadCovid() {
+    lftp -c "set ftp:ssl-allow no; open -u $1,$2 $3; rm -rf static; rm *.json; rm index.html; rm favicon.ico; rm -f precache-*; rm robots.txt; rm service-worker.js; mirror -Rev $4/ ./ --ignore-time --parallel=10"
+  }
+
+before_script:
+- *functions
+- apt-get update -qq && apt-get install -y -qq lftp

@@ -1,0 +1,26 @@
+.icon-menu {
+  width:24px;
+  height:24px;
+  display:inline-block;
+  background:var(--primary);
+}
+
+.icon-menu.imgProfile {
+  -webkit-mask:url("https://devassets.b-cdn.net/home/Icon-Profile.png") center/contain;
+          mask:url("https://devassets.b-cdn.net/home/Icon-Profile.png") center/contain;
+}
+
+.icon-menu.imgHealth {
+  -webkit-mask:url("https://devassets.b-cdn.net/home/Icon-Health.png") center/contain;
+          mask:url("https://devassets.b-cdn.net/home/Icon-Health.png") center/contain;
+}
+
+.icon-menu.imgPassword {
+  -webkit-mask:url("https://devassets.b-cdn.net/home/Icon-Password.png") center/contain;
+          mask:url("https://devassets.b-cdn.net/home/Icon-Password.png") center/contain;
+}
+
+.icon-menu.imgFamily {
+  -webkit-mask:url("https://devassets.b-cdn.net/home/Icon-Family.png") center/contain;
+          mask:url("https://devassets.b-cdn.net/home/Icon-Family.png") center/contain;
+}

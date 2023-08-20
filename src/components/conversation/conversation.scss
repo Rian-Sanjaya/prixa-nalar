@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+.super-fast {
+  animation-duration: 300ms;
+}
+
+.display-flex {
+  display: flex !important;
+  flex-direction: row  !important;
+  position: fixed;
+  align-items: justify;
+  top: 65px;
+}
+
+.prixa {
+  &-question {
+    &-image {
+      text-align: center;
+      margin-bottom: 40px;
+
+      img {
+        max-width: 300px;
+        width: 240px;
+      }
+    }
+  }
+
+  &-info {
+    &-icon {
+      color: $secondary;
+      border: 2px solid $secondary; 
+      padding: 5px 10px;
+      border-radius: 24px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../styles/colors.scss';
+
+.prixa-status-category-title {
+  color: $dark;
+}
+
+.prixa-status {
+  width: calc(375px - 80px);
+  display: flex;
+
+  span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &-wrapper {
+    cursor: pointer;
+    text-align: center;
+    display: inline-table;
+    margin-bottom: 20px;
+    &:not(:first-of-type) {
+      padding-left: 15px;
+    }
+  }
+
+  &-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid $disabled;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 33px;
+    }
+
+    &.merokok {
+      img {
+        height: 23px;
+      }
+    }
+
+    &.alkohol {
+      img {
+        height: 25px;
+      }
+    }
+
+    &.active {
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+    transition: 0.3s;
+  }
+}

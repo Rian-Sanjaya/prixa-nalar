@@ -1,0 +1,45 @@
+{
+  "preconditions": {
+    "gender": "MALE",
+    "year": "2000",
+    "month": "2",
+    "day": "10",
+    "height": "175",
+    "weight": "80"
+  },
+  "userCharacteristics": {},
+  "chiefComplaint": "Sariawan",
+  "selectChiefComplaint": "Sariawan",
+  "answers": [
+    {
+      "title": "Duration",
+      "question": "Sejak kapan anda merasakan keluhan yang anda alami saat ini?",
+      "answer": "1-14 hari"
+    },
+    {
+      "title": "Shapes",
+      "question": "Bisa tolong anda jelaskan lebih spesifik tentang keluhan yang anda rasakan?",
+      "answer": "Bentuk sariawan berbatas tidak teratur"
+    },
+    {
+      "title": "More than 1cm",
+      "question": "Bila dibagi ke dalam kategori berikut, bagaimana gejala yang anda rasakan?",
+      "answer": "Ukuran luka di atas 1 centimeter"
+    },
+    {
+      "title": "Has fever",
+      "question": "Apakah Anda mengalami gejala demam?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has more than 10",
+      "question": "Apakah jika dihitung jumlah sariawan Anda lebih dari sepuluh?",
+      "answer": "Tidak"
+    }
+  ],
+  "diagnose": [
+    "Luka Pada Mukosa Mulut Non-spesifik",
+    "Stomatitis aftosa rekuren tipe major",
+    "Stomatitis Aftosa Rekuren tipe Minor"
+  ]
+}

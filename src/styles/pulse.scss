@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.blobs-container {
+  display: table;
+  margin: calc((100vh - 700px) / 2) -62.5px 0 !important;
+  position: static;
+}
+
+@media only screen and (min-device-width : 360px) and (max-device-width : 480px) and (orientation : portrait) { 
+  .blobs-container {
+    display: table;
+    margin: calc((100vh - 700px) / 2) calc((500px - 100vw) / 2 * -1) 0 !important;
+    position: static;
+    max-width: calc(100vw - 80px);
+  }
+}
+
+.blob {
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	margin: 237.5px;
+	height: 25px;
+	width: 25px;
+	transform: scale(1);
+	animation: pulse 3s infinite;
+}
+
+.blob2 {
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	margin: -300px 200px;
+	height: 100px;
+	width: 100px;
+	transform: scale(1);
+	animation: pulse 3s infinite;
+}
+
+.blob3 {
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	margin: 150px;
+	height: 200px;
+	width: 200px;
+	transform: scale(1);
+	animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(204, 204, 204, 0.5);
+  }
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 150px rgba(204, 204, 204, 0.125);
+  }
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(204, 204, 204, 0);
+	}
+}
+
+
+.blob4 {
+	border-radius: 50%;
+	margin: 150px;
+	margin-top: -350px;
+	height: 200px;
+	width: 200px;
+	transform: scale(1);
+  background-image: url(https://storage.googleapis.com/prixa-diagnostic-web-assets/v2/telemed/Cari%20Dokter.png);
+  background-size: cover;
+}
+
+@keyframes pulse2 {
+	0% {
+		transform: scale(0);
+  }
+	
+	70% {
+		transform: scale(1);
+  }
+	
+	100% {
+		transform: scale(0);
+	}
+}

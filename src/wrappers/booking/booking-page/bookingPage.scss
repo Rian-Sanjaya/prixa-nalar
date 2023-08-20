@@ -1,0 +1,289 @@
+/*progressbar*/
+.progress-bar {
+  margin-bottom: 16px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+.progress-bar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 30%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.progress-bar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 23px;
+  display: block;
+  font-size: 12px;
+  color: var(-dark);
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 0 auto;
+  border: 1.5px solid var(--dark-20);
+  text-align: center;
+}
+
+/*progressbar connectors*/
+.progress-bar li:after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: var(--dark-20);
+  position: absolute;
+  left: -25%;
+  top: 50%;
+  z-index: 1; /*put it behind the numbers*/
+}
+
+.progress-bar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.progress-bar li.active:before, .progress-bar li.active:after {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.prixa-doctor-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prixa-booking-calendar {
+  margin-top: 16px;
+
+  .react-datepicker {
+    font-size: 1em;
+    border: 0px;
+    width: 100%;
+  }
+
+  .react-datepicker__header {
+    font-size: 12px;
+    padding-top: 0.8em;
+    background-color: transparent;
+    border-bottom: 0px;
+  }
+
+  .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+    color: var(--dark);
+    line-height: 18px;
+  }
+
+  .react-datepicker__day-name {
+    font-size: 12px;
+    color: var(--dark);
+    font-weight: bold;
+  }
+
+  .react-datepicker__day-names, .react-datepicker__week {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      outline: none;
+    }
+  }
+
+  .react-datepicker__day {
+    font-size: 14px;
+  }
+
+  .react-datepicker__day:hover {
+    border-radius: 100%;
+  }
+
+  .react-datepicker__day--selected, .react-datepicker__day--selected:hover {
+    border-radius: 100%;
+    background-color: var(--primary);
+  }
+
+  .react-datepicker__month {
+    margin: 0em;
+  }
+
+  .react-datepicker__month-container {
+    width: 100%;
+  }
+
+  .react-datepicker__day-name, .react-datepicker__day {
+    width: 2.3em;
+    height: 2.3em;
+    margin: 0.166em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .react-datepicker__current-month {
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+}
+
+.prixa-booking-summary {
+  border-radius: 8px;
+  display: inline-block;
+  box-sizing: content-box;
+  -webkit-filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+  position: relative;
+  padding: 1em;
+  color: #000;
+  font-size: 16px;
+  background-size: 51% 70.5%;
+  background-repeat: repeat-y;
+  background-image: radial-gradient(circle at 0 77px, rgba(255,255,224,0) 0.4em, #ffffff 0.5em), radial-gradient(circle at 100% 77px, rgba(255,255,224,0) 0.4em, #ffffff 0.5em);
+  background-position: top left, top right;
+  padding: 0;
+  width: 100%;
+}
+
+.hole-left-top {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 100%;
+  position: absolute;
+  left: -6px;
+  bottom: -6px;
+}
+
+.hole {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 100%;
+  position: absolute;
+}
+
+.hole-right-top {
+  @extend .hole;
+  right: -6px;
+  bottom: -6px;
+}
+
+.hole-left-top {
+  @extend .hole;
+  left: -6px;
+  bottom: -6px;
+}
+
+.hole-left-bottom {
+  @extend .hole;
+  left: -6px;
+  top: -6px;
+}
+
+.hole-right-bottom {
+  @extend .hole;
+  right: -6px;
+  top: -6px;
+}
+
+.prixa-booking-data {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:not(:first-child) {
+    padding-top: 16px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--dark-20);
+  }
+}
+
+.prixa-tabs {
+  .react-tabs__tab-list {
+    border-bottom: 2px solid var(--dark-10);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .react-tabs__tab {
+    color: var(--dark-10);
+    font-size: 16px;
+    line-height: 24px;
+    border: 0px;
+    border-bottom: 2px solid transparent;
+    width: 100%;
+    text-align: center;
+    transition: .500s;
+  }
+
+  .react-tabs__tab--selected {
+    color: var(--primary);
+    font-weight: bold;
+    border-color: var(--primary);
+  }
+
+  .react-tabs__tab:focus {
+    box-shadow: none;
+    border-color: initial;
+  }
+}
+
+@mixin flex-grid-items($cols) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    $item-width: 100% / $cols;
+    width: $item-width;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+  }
+}
+
+.flex-4-cols {
+  @include flex-grid-items(4);
+}
+
+.flex-3-cols {
+  @include flex-grid-items(3);
+}
+
+.prixa-time-slot:not(:last-child) {
+  margin-right: 8px;
+}
+
+.prixa-time-slot-button {
+  opacity: 0;
+  position: absolute;
+}
+
+.prixa-time-slot-label {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--dark);
+  padding: 8px 10px;
+  font-weight: initial;
+  border-radius: 21px;
+  border: 1px solid var(--dark-10);
+  white-space: nowrap;
+}
+
+.prixa-time-slot-button:checked + .prixa-time-slot-label { 
+  background-color: var(--primary); 
+  color: #ffffff; 
+  font-weight: bold;
+  border: 1px solid var(--primary);
+}

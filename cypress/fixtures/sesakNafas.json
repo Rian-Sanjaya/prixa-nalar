@@ -1,0 +1,67 @@
+{
+  "preconditions": {
+    "gender": "MALE",
+    "year": "2000",
+    "month": "2",
+    "day": "10",
+    "height": "175",
+    "weight": "80"
+  },
+  "userCharacteristics": {},
+  "userInfectionHistory": { "contactHistory": "Tidak Tahu", "localTransmission": "Ya" },
+  "chiefComplaint": "Sesak Nafas",
+  "selectChiefComplaint": "Sesak napas",
+  "answers": [
+    {
+      "title": "Duration",
+      "question": "Sejak kapan anda merasakan keluhan yang anda alami saat ini?",
+      "answer": "1-14 hari"
+    },
+    {
+      "title": "Category",
+      "question": "Bila dibagi ke dalam kategori berikut, bagaimana gejala yang anda rasakan?",
+      "answer": "Berat (keluhan membuat anda tidak dapat beraktivitas)"
+    },
+    {
+      "title": "Has cough",
+      "question": "Apakah Anda mengalami gejala batuk-batuk?",
+      "answer": "Ya"
+    },
+    {
+      "title": "Has fever",
+      "question": "Apakah Anda mengalami gejala demam?",
+      "answer": "Ya"
+    },
+    {
+      "title": "Has runny nose",
+      "question": "Apakah Anda pilek atau terdapat cairan yang keluar dari hidung Anda?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has blood cough",
+      "question": "Apakah saat Anda batuk tampak dahak bercampur darah?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has hard breath sound",
+      "question": "Apakah terdapat suara mengi atau seperti suara bersiul saat Anda menarik atau membuang nafas?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has swallow difficulties",
+      "question": "Apakah anda merasa sulit menelan?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has chest pain",
+      "question": "Apakah terdapat nyeri saat rusuk dada Anda disentuh?",
+      "answer": "Tidak"
+    },
+    {
+      "title": "Has continous chest pain",
+      "question": "Apakah Anda mengalami nyeri dada yang sangat berat dan terus menerus?",
+      "answer": "Tidak"
+    }
+  ],
+  "diagnose": ["Pneumonia", "Bronkitis Akut", "Gangguan Pernapasan Non-spesifik"]
+}

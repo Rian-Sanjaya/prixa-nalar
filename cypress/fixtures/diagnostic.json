@@ -1,0 +1,22 @@
+{
+  "name": "Rheza",
+  "email": "rheza@prixa.ai",
+  "phone": "0809899999",
+  "province": "Jawa Tengah",
+  "city": "Kendal",
+  "page": {
+    "thankYouTitle": "Terima kasih jawabannya.",
+    "thankYouContent": "Berikut hasil analisis Prixa berdasarkan keluhan yang disampaikan.",
+    "rememberTitle": "Perlu diingat, hasil Prixa ini bukan pengganti diagnosis medis dokter ya.",
+    "rememberContent": "Konsultasikan keluhan Anda dengan dokter untuk pemeriksaan lebih lanjut.",
+    "lihatHasilTitle": "Perlu diingat, Hasil Prixa ini bukan pengganti diagnosis medis dokter ya. ",
+    "lihatHasilContent": "Segera konsultasi dengan dokter jika keluhan memburuk atau terdapat keluhan lain yang Anda rasakan.",
+    "lihatHasilInfo": "Lihat keterangan lebih lanjut pada hasil prediksi di bawah untuk informasi penanganan yang dapat Anda lakukan.",
+    "surveyLayananTopTitle": "Survey Layanan",
+    "surveyLayananTitle": "Terima kasih untuk jawaban Anda.",
+    "surveyLayananContent": "Saran Anda akan membantu Prixa untuk dapat memberi layanan yang lebih baik lagi.",
+    "lihatRangkumanKeluhan": "Lihat Rangkuman Keluhan",
+    "kirimHasilPrixa": "Kirim Hasil Prixa ke Email",
+    "surveyLayanan": "Survey Layanan"
+  }
+}

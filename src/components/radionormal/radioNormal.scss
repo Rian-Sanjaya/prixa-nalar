@@ -1,0 +1,49 @@
+@import '../../styles/colors.scss';
+
+.prixa-radio-normal{
+  margin-bottom: 16px;
+
+  &-input{
+    opacity: 0;
+  }
+
+  &-label{
+    cursor: pointer;
+    padding-left: 32px;
+    position: relative;
+
+    &:before{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      border: 1px solid $disabled;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+
+  &.checked{
+    .prixa-radio-normal-label{
+      &:before{
+        border: 2px solid $success;
+        width: 19px;
+        height: 19px;
+      }
+      &:after{
+        content:'';
+        position: absolute;
+        background-color: $success;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        top: 4px;
+        left: 4px;
+      }
+    }
+  }
+
+  
+}

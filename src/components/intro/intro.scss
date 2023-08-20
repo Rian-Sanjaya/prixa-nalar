@@ -1,0 +1,179 @@
+.scrollbar {
+    ::-webkit-scrollbar { 
+        display: none;  /* Chrome Safari */
+    }
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE 10+ */
+      overflow-y: auto;
+      overflow-x: scroll;
+}
+
+.landingpage {
+    #greeting-section {
+        padding: 0 40px;
+        margin-bottom: 40px;
+
+        .title {
+            margin-bottom: 8px;
+        }
+    }
+
+    #welcome-section {
+        padding: 0 40px;
+        margin-bottom: 40px;
+
+        .title {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+        }
+
+        .logreg-button {
+            display: flex;
+            margin-top: 16px;
+            justify-content: center;
+
+            .log-button, .reg-button {
+                width: 80px;
+                height: 36px;
+                border-radius: 18px;
+                font-size: 12px;
+            }
+
+            .reg-button {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    #history-activity-section {
+        padding: 0 40px;
+        margin-bottom: 40px;
+
+        .title {
+            width: 175px;
+            margin: 0 auto 24px;
+            text-align: center;
+        }
+    }
+
+    #cta-section {
+        padding: 0 40px;
+        margin-bottom: 40px;
+    }
+
+    #not-covid-question-section {
+        margin-bottom: 40px;
+
+        .question {
+            width: 261px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    #prixa-dict-section {
+        margin-bottom: 40px;
+        padding: 0 40px;
+
+        .text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+    }
+
+    #about-prixa-section {
+        margin-bottom: 40px;
+        padding: 0 40px;
+
+        .about-prixa-container {
+            padding: 0;
+
+            .title {
+                text-align: center;
+                margin-bottom: 4px;
+            }
+
+            .subtitle {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            .description {
+                text-align: center;
+                margin-bottom: 26px;
+                display: flex;
+            }
+
+            .read-button {
+                text-align: center;
+
+                button {
+                    border: none;
+                    border-radius: 18px;
+                    background-color: var(--primary);
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 10px 16px;
+                    font-weight: 700;
+                    font-family: 'ROBOTO';
+                    cursor: pointer;
+                }
+            }
+
+            .about-prixa-img {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.banner-covid-container {
+    .title {
+        width: 192px;
+        margin: 0 auto 24px;
+    }
+
+    .covid-image-container {
+        position: relative;
+
+        .covid-image {
+            margin: 0 auto;
+    
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 19px;
+            left: 26px;
+            font-weight: bold;
+
+            .content-title {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .subtitle {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

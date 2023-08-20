@@ -1,0 +1,15 @@
+.ReactSwipeableBottomSheet--open {
+  padding: 0;
+}
+
+.wtdkb:not(:disabled):not(.disabled):active, 
+.wtdkb.active,
+.wtdkb:focus {
+  border: 4px solid var(--primary) !important;
+}
+
+.dUsZEl:not(:disabled):not(.disabled):active, 
+.dUsZEl.active,
+.dUsZEl:focus {
+  border: 4px solid var(--secondary) !important;
+}

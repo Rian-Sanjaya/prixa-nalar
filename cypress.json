@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "chromeWebSecurity": false,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/results/TEST-[hash].xml"
+  },
+  "env": {
+    "covid": false,
+    "API_KEY": "6c7c7bf99b304c8012e2d0e7fb881074aaea4a0d0fd74b3daf12ca3e123d48cb"
+  },
+  "projectId": "5t2ju1",
+  "defaultCommandTimeout": 30000,
+  "requestTimeout": 30000,
+  "viewportHeight": 800,
+  "viewportWidth": 800
+}

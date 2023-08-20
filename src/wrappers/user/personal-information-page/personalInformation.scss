@@ -1,0 +1,86 @@
+.prixa-birtdate-calendar {
+  .Calendar {
+    box-shadow: none;
+    width: 100%;
+    .Calendar__day.-selected {
+      border-radius: 8px;
+      background: var(--success);
+      font-weight: bold;
+    }
+
+    .Calendar__yearText, .Calendar__monthText {
+      color: #ffffff;
+      font-weight: bold;
+      background: var(--success);
+    }
+
+    .Calendar__monthSelectorItem.-active .Calendar__monthSelectorItemText, .Calendar__yearSelectorItem.-active .Calendar__yearSelectorText {
+      background: var(--primary);
+    }
+  }
+}
+
+#prixa-file-upload {
+  color: transparent;
+  width: 65px;
+}
+#prixa-file-upload::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#prixa-file-upload::before {
+  content: 'Ganti Foto';
+  width: 191px;
+  height: 16px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.ReactSwipeableBottomSheet--open {
+  padding: 0;
+}
+
+.wtdkb:not(:disabled):not(.disabled):active, 
+.wtdkb.active,
+.wtdkb:focus {
+  border: 4px solid var(--primary) !important;
+}
+
+.dUsZEl:not(:disabled):not(.disabled):active, 
+.dUsZEl.active,
+.dUsZEl:focus {
+  border: 4px solid var(--secondary) !important;
+}
+
+.personalinfoDOB-box {
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-moz-placeholder { /* Firefox 19+ */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-ms-input-placeholder { /* IE 10+ */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-moz-placeholder { /* Firefox 18- */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::placeholder {
+    color: var(--grey);
+    font-style: italic;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%REACT_APP_ASSET_URL%/prixa-logomark.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="Prixa adalah layanan konsultasi dan tes kesehatan cepat dan akurat di Indonesia." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="Diagnosa Prixa" />
+  <meta name="application-name" content="Diagnosa Prixa" />
+  <link rel="canonical" href="https://prixa.ai/" />
+  <link rel="apple-touch-icon" href="%REACT_APP_ASSET_URL%/prixa-logomark.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="dns-prefetch" href="%REACT_APP_API_URL%/api" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap">
+  <link rel="dns-prefetch" href="https://unpkg.com/prixa-design-kit@0.3.3/dist/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/prixa-design-kit@0.3.3/dist/style.css">
+  <title>Prixa Diagnostic</title>
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "cd800306-1cd9-48d6-9ba9-c92d89a44ba8";
+    // (function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+  </script>
+  <script async src="%PUBLIC_URL%/track.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_ID%"></script>
+  <script>
+    if ('%REACT_APP_GA_ID%') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', '%REACT_APP_GA_ID%');
+    }
+  </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(p,r,i,x,a){
+      var s = r.createElement(i)
+      s.src = x
+      s.async = true;
+
+      var f = r.getElementsByTagName(i)[0];
+      f.parentNode.insertBefore(s, f)
+      s.onload = function() {
+        p[a].start('%REACT_APP_API_URL%', '%REACT_APP_API_KEY%')
+      }
+    }(window,document,'script','%PUBLIC_URL%/track.js','ptrack'))
+
+    if ('%REACT_APP_GTM_ID%') {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', '%REACT_APP_GTM_ID%');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <script>
+    if(!document.referrer.includes('prixa') && !document.referrer.includes('localhost')){
+      localStorage.setItem('referrer', document.referrer);
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <iframe src="https://www.googletagmanager.com/ns.html?id=%REACT_APP_GTM_ID%" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+    <!-- End Google Tag Manager (noscript) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  </noscript>
+</body>
+
+</html>

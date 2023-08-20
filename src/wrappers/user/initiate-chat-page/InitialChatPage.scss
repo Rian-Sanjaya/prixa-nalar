@@ -1,0 +1,22 @@
+.ReactSwipeableBottomSheet--open {
+  padding: 0;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 360px) and (max-device-width : 480px) and (orientation : portrait) {
+  .prixa-container.is-top.is-full.is-center {
+    width: 100% !important;
+    max-width: 375px !important;
+  }
+}
+
+/* Android Nexus 6 */
+@media only screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) 
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 3.5) {
+    #crisp-chatbox > div > div {
+      left: 0 !important;
+    }
+}

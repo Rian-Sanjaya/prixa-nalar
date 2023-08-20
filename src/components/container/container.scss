@@ -1,0 +1,10 @@
+.display-flex {
+  display: flex !important;
+  flex-direction: row  !important;
+  position: fixed;
+  top: 65px;
+}
+
+.ReactSwipeableBottomSheet--open {
+  padding: 0;
+}

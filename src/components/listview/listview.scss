@@ -1,0 +1,39 @@
+@import '../../styles/colors.scss';
+
+a {
+  color: inherit;
+}
+
+.prixa {
+  &-list {
+    padding: 20px 32px;
+    border-top: 1px solid $border-color;
+  
+    &-title {
+      margin-bottom: 5px;
+    }
+  
+    &-button {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &.no-border-top{
+      border-top: none;
+    }
+
+    &.hoverable{
+      cursor: pointer;
+
+      &:hover{
+        background-color: var(--dark-20);
+      }
+    }
+  }
+}

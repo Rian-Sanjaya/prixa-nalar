@@ -1,0 +1,138 @@
+@import '../../../styles/colors.scss';
+
+.prixa-search-container{
+  display: flex;
+  margin: 40px 20px;
+    
+  .prixa-search-to-open{
+    display: flex;
+    flex:1;
+    cursor: text;
+    border: 1px solid $disabled;
+    border-radius: 48px;
+    align-items: center;
+  }
+
+  .prixa-search-filter-button{
+    border: 1px solid $disabled;
+    border-radius: 50%;
+    cursor:pointer;
+  }
+}
+
+.prixa-center-middle{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -48px;
+}
+
+.search-doctors-skeleton {
+  flex:1;
+  margin-right: 8px;
+  span {
+    span {
+      border-radius: 50px;
+    }
+  }
+}
+
+.all-hospital-link, .all-speciality-link {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.all-hospital-link:hover, .all-speciality-link:hover {
+  opacity: 0.7;
+}
+
+.prixa-hospital-image {
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.prixa-hospital-information {
+  display: flex;
+  flex-direction: column;
+
+  .title, .information, .specialization {
+
+    display: flex;
+    flex-direction: column;
+    
+    &:not(:first-child) {
+      padding-top: 24px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--dark-40);
+    }
+
+    .information-list {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.prixa-hospital-specialities {
+    
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    cursor: pointer;
+    margin-bottom: 16px;
+    text-align: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      padding-right: 16px;    
+    }
+
+  img {
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-size: 10px;
+    word-wrap: break-word;
+    color: $black;
+  }
+
+  .rest-specialities {
+    font-weight: bold;
+    color: $primary;
+  }
+
+  .prixa-rest-specialities {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 100%;
+    color: $primary;
+    font-weight: bold;
+    background-color: var(--dark-10);
+  }
+}
+

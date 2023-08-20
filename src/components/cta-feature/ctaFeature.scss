@@ -1,0 +1,76 @@
+@import '../../styles/colors.scss';
+
+.prixa {
+  &-cta {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 300ms ease;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+      font-weight: bold;
+      justify-content: center;
+      margin-left: 16px;
+
+      .title {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .subtitle {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    img {
+      height: 64px;
+      width: 64px;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+    }
+  }
+}
+
+.cta-diagnosa {
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 32px;
+    left: 14px;
+    font-weight: bold;
+
+    .title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

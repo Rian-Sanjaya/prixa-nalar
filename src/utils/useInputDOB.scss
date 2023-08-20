@@ -1,0 +1,26 @@
+.useInputDOB-box {
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-moz-placeholder { /* Firefox 19+ */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-ms-input-placeholder { /* IE 10+ */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::-moz-placeholder { /* Firefox 18- */
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  input::placeholder {
+    color: var(--grey);
+    font-style: italic;
+  }
+}

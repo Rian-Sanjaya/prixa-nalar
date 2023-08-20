@@ -1,0 +1,132 @@
+@import '../../styles//colors.scss';
+
+.carousel-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 24px;
+  background-color: var(--primary-40);
+  padding: 0px;
+  border: 0px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.carousel-dot.active {
+  background-color: $primary;
+}
+
+ul.react-multi-carousel-dot-list {
+  top: 580px;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.react-multi-carousel-track  > li {
+  all: unset !important;
+  width: 295px !important;
+}
+
+.text-carousel {
+  display: block;
+  text-align: center;
+}
+
+.carousel-next-button {
+  top: 575px;
+}
+
+.coupon-text {
+  font-weight: bold;
+  margin-right: 8px;
+  width: 179px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.coupon-button {
+  border-radius: 20px;
+  height: 32px;
+  border: solid 2px #fff;
+  font-size: 14px;
+  font-weight: bolder;
+  background: transparent;
+}
+
+// CTA Feature
+.prixa {
+  &-cta {
+    display: flex;
+    margin-bottom: 12px;
+
+    .cta {
+      flex: 50%;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .prixa-cta-title {
+        position: absolute;
+        top: 85px;
+        right: 12px;
+        width: 96px;
+        text-align: right;
+
+        span {
+          font-size: 14px;
+          color: #ffffff;
+          font-weight: bold;
+          line-height: 1.29;
+          letter-spacing: normal;
+          font-stretch: normal;
+        }
+      }
+    }
+
+    &-soon {
+      opacity: .70;
+      position: absolute;
+      z-index: 1;
+      background-color: #ffffff;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .coming-soon {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      position: absolute;
+      top: 24px;
+      left: 12px;
+      right: 12px;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media only screen and (min-device-width : 360px) and (max-device-width : 480px) and (orientation : portrait) {
+  .react-multi-carousel-track  > li {
+    width: calc(100vw - 80px) !important;
+  }
+}
+
+@media (min-height: 1919px) and (min-width: 1079px) {
+  .react-multi-carousel-track  > li {
+    width: 395px !important;
+  }
+}

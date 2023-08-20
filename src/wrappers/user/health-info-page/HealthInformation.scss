@@ -1,0 +1,13 @@
+.lihat-penjelasan-precond {
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 900;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+  }
+}
